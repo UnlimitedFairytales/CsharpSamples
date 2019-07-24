@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A11554A0-C9F3-499D-9CE2-329A00FEAF49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UnlimitedFairytales.CsharpSamples.Forms</RootNamespace>
+    <AssemblyName>UnlimitedFairytales.CsharpSamples.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form01CommonControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form01CommonControls.designer.cs">
+      <DependentUpon>Form01CommonControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form06TabByEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form06TabByEnter.Designer.cs">
+      <DependentUpon>Form06TabByEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11DgvEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11DgvEvent.designer.cs">
+      <DependentUpon>Form11DgvEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12DgvColumnOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12DgvColumnOrder.designer.cs">
+      <DependentUpon>Form12DgvColumnOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form02ShowDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form02ShowDialog.designer.cs">
+      <DependentUpon>Form02ShowDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form03Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form03Editor.designer.cs">
+      <DependentUpon>Form03Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form03Editor_AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form03Editor_AboutBox1.designer.cs">
+      <DependentUpon>Form03Editor_AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13DgvIndexAndDataSourceAndDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13DgvIndexAndDataSourceAndDelete.designer.cs">
+      <DependentUpon>Form13DgvIndexAndDataSourceAndDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form14DgvCustomizedSelecting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14DgvCustomizedSelecting.designer.cs">
+      <DependentUpon>Form14DgvCustomizedSelecting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form04TextBoxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form04TextBoxes.designer.cs">
+      <DependentUpon>Form04TextBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form05ComboBoxesAndListBoxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form05ComboBoxesAndListBoxes.designer.cs">
+      <DependentUpon>Form05ComboBoxesAndListBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDgv.designer.cs">
+      <DependentUpon>FormDgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15DgvNumericAndTextFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15DgvNumericAndTextFormat.designer.cs">
+      <DependentUpon>Form15DgvNumericAndTextFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommon.designer.cs">
+      <DependentUpon>FormCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form01CommonControls.resx">
+      <DependentUpon>Form01CommonControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form06TabByEnter.resx">
+      <DependentUpon>Form06TabByEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11DgvEvent.resx">
+      <DependentUpon>Form11DgvEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12DgvColumnOrder.resx">
+      <DependentUpon>Form12DgvColumnOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form02ShowDialog.resx">
+      <DependentUpon>Form02ShowDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form03Editor.resx">
+      <DependentUpon>Form03Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form03Editor_AboutBox1.resx">
+      <DependentUpon>Form03Editor_AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13DgvIndexAndDataSourceAndDelete.resx">
+      <DependentUpon>Form13DgvIndexAndDataSourceAndDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14DgvCustomizedSelecting.resx">
+      <DependentUpon>Form14DgvCustomizedSelecting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form04TextBoxes.resx">
+      <DependentUpon>Form04TextBoxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form05ComboBoxesAndListBoxes.resx">
+      <DependentUpon>Form05ComboBoxesAndListBoxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDgv.resx">
+      <DependentUpon>FormDgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15DgvNumericAndTextFormat.resx">
+      <DependentUpon>Form15DgvNumericAndTextFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommon.resx">
+      <DependentUpon>FormCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

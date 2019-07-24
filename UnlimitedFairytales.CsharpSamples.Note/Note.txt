@@ -1,0 +1,30 @@
+﻿【参照可能関係】
+Standard < fw < Core
+
+【代表的なライブラリ】
+Json  : DataContractJsonSerializer     vs Json.NET  vs Utf8Json
+CSV   : TextFieldParser                vs CsvHelper
+Excel : Microsoft.Office.Interop.Excel vs EPPlus
+Http  : HtmlClient                     vs RestSharp
+QR    : ZXing.Net
+
+【保留中の課題】
+・Validate Best Practice MenuButtonも考慮するべき
+	・Registerで全Validateが走る。
+	・keyローダーでkeyに関わるValidateが走る。
+	・Menuやツールバーだとフォーカス移動しない問題の対処は？
+・Bindingベストプラクティス
+	・List<T>をバインドすると、強制readonly
+	・詳細不明：BindingSource
+	・DataSet/TableAdapterから生成されるSQLだけ取得
+	・ADO.NET 2.0 型付きDataSet。サーバエクスプローラ > 新しい項目でDataset追加 > D&D
+	・ADO.NET 4.0 Entity Framework。DBファースト vs ER図ファースト vs コードファースト
+
+【GcMultiRow】
+１、柔軟な行デザイン構成（1row2行式、row間結合や列無視配置）が可能
+２、絞り込み機能付属済み（但し文字列自由入力絞り込みは不可）
+３、数値セル、日付セル、マスクtxtセル、他ほぼすべてのコモンコントロールセルあり（フリーレイアウトなため）
+４、実装済みの文字列検索ボックス呼び出し
+５、セル単位のIME制御
+６、セル単位Validating/Validated
+７、タッチ操作系対応
