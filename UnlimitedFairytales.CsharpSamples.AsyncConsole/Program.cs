@@ -11,6 +11,7 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncConsole
         {
             Console.WriteLine("Press d or else.");
             var key = Console.ReadKey();
+            Console.WriteLine();
             if (key.Key == ConsoleKey.D)
             {
                 Console.WriteLine("Deadlock sample.");
