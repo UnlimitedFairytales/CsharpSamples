@@ -21,6 +21,20 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncForm
             this.label2.Text = await Form1.Do1Async(nameof(this.button2), 1000) + " at " + DateTime.Now.ToString("HH:mm:ss.");
         }
 
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            var task = Task.WhenAll(
+                    Task.Run(() => { System.Threading.Thread.Sleep(1000); return (new Random()).Next(1, 9) * 100;}),
+                    Task.Run(() => { System.Threading.Thread.Sleep(2000); return (new Random()).Next(1, 9); }));
+            var results = await task;
+            var sum = 0;
+            foreach (var result in results)
+            {
+                sum += result;
+            }
+            this.label3.Text = sum + " at " + DateTime.Now.ToString("HH:mm:ss.");
+        }
+
         static async Task<string> Do1Async(string no, int wait)
         {
             Console.WriteLine(no + nameof(Do1Async));
