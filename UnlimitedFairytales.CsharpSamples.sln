@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.MariaDB", "UnlimitedFairytales.CsharpSamples.MariaDB\UnlimitedFairytales.CsharpSamples.MariaDB.csproj", "{4B93E9A6-BA16-4F87-8200-86800A21C87A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.OracleWithDapper", "UnlimitedFairytales.CsharpSamples.OracleWithDapper\UnlimitedFairytales.CsharpSamples.OracleWithDapper.csproj", "{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4B93E9A6-BA16-4F87-8200-86800A21C87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B93E9A6-BA16-4F87-8200-86800A21C87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B93E9A6-BA16-4F87-8200-86800A21C87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
