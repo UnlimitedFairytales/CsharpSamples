@@ -1,6 +1,6 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using Dapper;
+using Oracle.ManagedDataAccess.Client;
 using System;
-using Dapper;
 using System.Windows.Forms;
 
 namespace UnlimitedFairytales.CsharpSamples.OracleWithDapper
