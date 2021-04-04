@@ -82,14 +82,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 60);
+            this.label4.Size = new System.Drawing.Size(320, 84);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Async best practice.\r\n\r\n1. async void を避ける\r\n2. すべて非同期にする\r\n3. コンテキストを構成する";
+            this.label4.Text = "Async best practice.\r\n\r\n1. async void を避ける\r\n2. すべて非同期にする\r\n3. コンテキストを構成する\r\n4. UIスレ" +
+    "ッドからのawaitだけConfigureAwaitはtrueにしておけばよい\r\n（ほとんどの非同期ライブラリは、ConfigureAwait(false)でよ" +
+    "い";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 184);
+            this.linkLabel1.Location = new System.Drawing.Point(10, 200);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(462, 12);
             this.linkLabel1.TabIndex = 5;
@@ -101,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 220);
+            this.label5.Location = new System.Drawing.Point(10, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(245, 60);
             this.label5.TabIndex = 6;
