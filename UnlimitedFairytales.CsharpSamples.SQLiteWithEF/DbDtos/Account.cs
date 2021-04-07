@@ -5,8 +5,10 @@ namespace UnlimitedFairytales.CsharpSamples.SQLiteWithEF.DbDtos
     [Table("accounts")]
     public class Account
     {
-        public int id { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
 
-        public string name { get; set; }
+        [Column("name")]
+        public string Name { get; set; }
     }
 }
