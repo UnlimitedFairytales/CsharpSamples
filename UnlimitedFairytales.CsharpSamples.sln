@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.log4net", "UnlimitedFairytales.CsharpSamples.log4net\UnlimitedFairytales.CsharpSamples.log4net.csproj", "{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.SQLite", "UnlimitedFairytales.CsharpSamples.SQLite\UnlimitedFairytales.CsharpSamples.SQLite.csproj", "{687C2D67-244B-4B1C-8248-8D6272C2687D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.SQLiteWithDapper", "UnlimitedFairytales.CsharpSamples.SQLiteWithDapper\UnlimitedFairytales.CsharpSamples.SQLiteWithDapper.csproj", "{C2E1D807-17C9-4817-9BF4-571F91A821B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E1D807-17C9-4817-9BF4-571F91A821B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E1D807-17C9-4817-9BF4-571F91A821B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E1D807-17C9-4817-9BF4-571F91A821B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E1D807-17C9-4817-9BF4-571F91A821B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
