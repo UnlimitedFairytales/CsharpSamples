@@ -13,17 +13,6 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncForm
             System.Diagnostics.Trace.WriteLine($"{dateTime} {threadId} {msg}");
         }
 
-        private async Task Do1AsyncWrapper(string buttonName, string self, Label label, bool innerConfigureAwait)
-        {
-            var target = $"await {nameof(Do1Async)}()";
-            Log($"{buttonName} {self} : begin");
-            // label.Textを後続で呼び出すためUIスレッドである必要がある。
-            // この呼び出しはConfigureAwait(true)である必要がある。
-            await Do1Async(buttonName, 1000, innerConfigureAwait);
-            label.Text = $"{buttonName} completed at {DateTime.Now.ToString("HH:mm:ss.fff")}";
-            Log($"{buttonName} {self} : end");
-        }
-
         public Form1()
         {
             InitializeComponent();
@@ -68,9 +57,21 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncForm
             this.label3.Text = sum + " at " + DateTime.Now.ToString("HH:mm:ss.fff");
             Form1.Log($"{buttonName} {self} : end");
         }
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(linkLabel1.Text);
+        }
+
+        private async Task Do1AsyncWrapper(string buttonName, string self, Label label, bool innerConfigureAwait)
+        {
+            var target = $"await {nameof(Do1Async)}()";
+            Log($"{buttonName} {self} : begin");
+            // label.Textを後続で呼び出すためUIスレッドである必要がある。
+            // この呼び出しはConfigureAwait(true)である必要がある。
+            await Do1Async(buttonName, 1000, innerConfigureAwait);
+            label.Text = $"{buttonName} completed at {DateTime.Now.ToString("HH:mm:ss.fff")}";
+            Log($"{buttonName} {self} : end");
         }
 
         static async Task Do1Async(string name, int wait, bool configureAwait)
