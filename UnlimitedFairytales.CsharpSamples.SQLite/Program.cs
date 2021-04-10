@@ -23,12 +23,14 @@ namespace UnlimitedFairytales.CsharpSamples.SQLite
             
             var cmd = conn.CreateCommand();
             cmd.CommandText = "select * from accounts";
-            var reader = cmd.ExecuteReader();
-            while (reader.Read())
+            using (var reader = cmd.ExecuteReader())
             {
-                var str = "id:" + reader.GetInt32(0).ToString() + Environment.NewLine
-                    + "name:" + reader.GetString(1);
-                Console.WriteLine(str);
+                while (reader.Read())
+                {
+                    var str = "id:" + reader.GetInt32(0).ToString() + Environment.NewLine
+                        + "name:" + reader.GetString(1);
+                    Console.WriteLine(str);
+                }
             }
             Console.ReadKey();
         }

@@ -18,12 +18,14 @@ namespace UnlimitedFairytales.CsharpSamples.Oracle
             conn.Open();
             var cmd = conn.CreateCommand();
             cmd.CommandText = "select * from accounts";
-            var reader = cmd.ExecuteReader();
-            while (reader.Read())
+            using (var reader = cmd.ExecuteReader())
             {
-                var str = "id:" + reader.GetInt32(0).ToString() + Environment.NewLine
-                    + "name:" + reader.GetString(1);
-                MessageBox.Show(str);
+                while (reader.Read())
+                {
+                    var str = "id:" + reader.GetInt32(0).ToString() + Environment.NewLine
+                        + "name:" + reader.GetString(1);
+                    MessageBox.Show(str);
+                }
             }
         }
     }
