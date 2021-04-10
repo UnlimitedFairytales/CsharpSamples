@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.SQLiteWithEF", "UnlimitedFairytales.CsharpSamples.SQLiteWithEF\UnlimitedFairytales.CsharpSamples.SQLiteWithEF.csproj", "{8CDC1962-2CEF-4F14-9B39-ED7ECE0B0957}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Postgres", "UnlimitedFairytales.CsharpSamples.Postgres\UnlimitedFairytales.CsharpSamples.Postgres.csproj", "{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8CDC1962-2CEF-4F14-9B39-ED7ECE0B0957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CDC1962-2CEF-4F14-9B39-ED7ECE0B0957}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CDC1962-2CEF-4F14-9B39-ED7ECE0B0957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
