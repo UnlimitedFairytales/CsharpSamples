@@ -17,7 +17,9 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncForm
         {
             var target = $"await {nameof(Do1Async)}()";
             Log($"{buttonName} {self} : begin");
-            await Do1Async(buttonName, 1000, innerConfigureAwait); // UIスレッドである必要があるため、Do1Asyncの呼び出しはConfigureAwait(true)
+            // label.Textを後続で呼び出すためUIスレッドである必要がある。
+            // この呼び出しはConfigureAwait(true)である必要がある。
+            await Do1Async(buttonName, 1000, innerConfigureAwait);
             label.Text = $"{buttonName} completed at {DateTime.Now.ToString("HH:mm:ss.fff")}";
             Log($"{buttonName} {self} : end");
         }
