@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests", "UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests\UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests.csproj", "{5D1572B0-0205-473C-986B-4AEFA3CF707B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.ResxSample", "UnlimitedFairytales.CsharpSamples.ResxSample\UnlimitedFairytales.CsharpSamples.ResxSample.csproj", "{416BF993-B559-43AC-BF99-3C5E26A623B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{5D1572B0-0205-473C-986B-4AEFA3CF707B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D1572B0-0205-473C-986B-4AEFA3CF707B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D1572B0-0205-473C-986B-4AEFA3CF707B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416BF993-B559-43AC-BF99-3C5E26A623B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416BF993-B559-43AC-BF99-3C5E26A623B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416BF993-B559-43AC-BF99-3C5E26A623B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416BF993-B559-43AC-BF99-3C5E26A623B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
