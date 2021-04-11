@@ -1,6 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Globalization;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests
@@ -18,8 +16,7 @@ namespace UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests
         public static string ERR_NETWORK = "ネットワークエラーが発生しました。管理者に連絡してください。";
     }
 
-    [TestClass]
-    public class MessageConstantTest
+    public static class MyMessageConstant
     {
         public static readonly MessageConstant ERR_SYSTEM =
             new MessageConstant(MessageBoxIcon.Error, MessageBoxButtons.OK, () => Consts.ERR_SYSTEM);
@@ -47,12 +44,16 @@ namespace UnlimitedFairytales.CsharpSamples.FormUtilitySamples.Tests
 
         public static readonly MessageConstant ERR_NETWORK =
             new MessageConstant(MessageBoxIcon.Error, MessageBoxButtons.OK, () => Consts.ERR_NETWORK);
+    }
 
+    [TestClass]
+    public class MessageConstantTest
+    {
         [TestMethod]
         public void TestERR_SYSTEM()
         {
             // Arrange
-            var msg = MessageConstantTest.ERR_SYSTEM;
+            var msg = MyMessageConstant.ERR_SYSTEM;
             // Act
             // Assert
             Assert.AreEqual("システムエラーが発生しました。管理者に連絡してください。", msg.MbMessage);

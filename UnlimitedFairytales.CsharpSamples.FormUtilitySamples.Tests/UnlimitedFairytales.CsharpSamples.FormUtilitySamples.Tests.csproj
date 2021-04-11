@@ -50,6 +50,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\FormValidationExceptionTest.cs" />
     <Compile Include="MessageConstantTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
