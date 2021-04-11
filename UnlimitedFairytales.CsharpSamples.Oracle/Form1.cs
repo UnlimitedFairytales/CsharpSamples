@@ -13,6 +13,7 @@ namespace UnlimitedFairytales.CsharpSamples.Oracle
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("oracle");
             var conn = new OracleConnection();
             conn.ConnectionString = "User ID=foo; Password=bar; Data Source=192.168.3.251:1521/dev";
             conn.Open();

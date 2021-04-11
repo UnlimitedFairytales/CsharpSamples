@@ -10,6 +10,7 @@ namespace UnlimitedFairytales.CsharpSamples.SQLiteWithDapper
         static readonly string DB_FILE_PATH = @"DB\sqlite.db";
         static void Main(string[] args)
         {
+            Console.WriteLine("sqlite with dapper");
             SQLiteConnection conn;
             if (!File.Exists(DB_FILE_PATH))
             {

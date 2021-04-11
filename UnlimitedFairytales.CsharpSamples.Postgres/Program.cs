@@ -7,6 +7,7 @@ namespace UnlimitedFairytales.CsharpSamples.Postgres
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("postgres");
             NpgsqlConnection conn = new NpgsqlConnection();
             conn.ConnectionString = @"Username = foo; Password = bar; Host = 192.168.3.252; Port = 5432; Database = test";
             conn.Open();

@@ -67,6 +67,7 @@ namespace UnlimitedFairytales.CsharpSamples.SQLiteWithEF
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("sqlite with EF");
             using (var context = new SQLiteContext())
             {
                 var accounts = context.Accounts.ToList();

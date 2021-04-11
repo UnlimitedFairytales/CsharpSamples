@@ -13,6 +13,7 @@ namespace UnlimitedFairytales.CsharpSamples.MariaDB
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("mariadb");
             var conn = new MySqlConnection();
             conn.ConnectionString = "User ID=root; Password=foo; Data Source=192.168.3.253; Port=3306; Database=test";
             conn.Open();

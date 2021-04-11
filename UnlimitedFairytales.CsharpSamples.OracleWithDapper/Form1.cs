@@ -14,6 +14,7 @@ namespace UnlimitedFairytales.CsharpSamples.OracleWithDapper
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("oracle with dapper");
             var conn = new OracleConnection();
             conn.ConnectionString = "User ID=foo; Password=bar; Data Source=192.168.3.251:1521/dev";
             conn.Open();
