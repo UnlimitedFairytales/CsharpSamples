@@ -19,6 +19,8 @@ QR    : ZXing.Net
 	・DataSet/TableAdapterから生成されるSQLだけ取得
 	・ADO.NET 2.0 型付きDataSet。サーバエクスプローラ > 新しい項目でDataset追加 > D&D
 	・ADO.NET 4.0 Entity Framework。DBファースト vs ER図ファースト vs コードファースト
+・ファイル設定Sectionサンプル
+・SQLについて、DDL発行ViaDDLファイル
 
 【GcMultiRow】
 １、柔軟な行デザイン構成（1row2行式、row間結合や列無視配置）が可能
