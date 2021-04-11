@@ -31,11 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Postgres", "UnlimitedFairytales.CsharpSamples.Postgres\UnlimitedFairytales.CsharpSamples.Postgres.csproj", "{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.SQLiteWithIDbProfiler", "UnlimitedFairytales.CsharpSamples.SQLiteWithIDbProfiler\UnlimitedFairytales.CsharpSamples.SQLiteWithIDbProfiler.csproj", "{F3590AB3-2622-44BC-A3F5-530973C90F25}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.UtilitySamples", "UnlimitedFairytales.CsharpSamples.UtilitySamples\UnlimitedFairytales.CsharpSamples.UtilitySamples.csproj", "{B84B377D-D038-4796-9965-FC7FBF89EAE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests", "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests\UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests.csproj", "{358A7117-29D5-4713-9D49-BEADF606FE9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests", "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests\UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests.csproj", "{358A7117-29D5-4713-9D49-BEADF606FE9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.FormUtilitySamples", "UnlimitedFairytales.CsharpSamples.FormUtilitySamples\UnlimitedFairytales.CsharpSamples.FormUtilitySamples.csproj", "{5D432B2B-F7DC-4F64-A7C2-CBB11604CC3A}"
 EndProject
@@ -103,10 +101,6 @@ Global
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3590AB3-2622-44BC-A3F5-530973C90F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3590AB3-2622-44BC-A3F5-530973C90F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3590AB3-2622-44BC-A3F5-530973C90F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3590AB3-2622-44BC-A3F5-530973C90F25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
