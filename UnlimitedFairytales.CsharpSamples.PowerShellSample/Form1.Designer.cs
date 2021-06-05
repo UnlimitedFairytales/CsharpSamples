@@ -41,6 +41,7 @@ namespace UnlimitedFairytales.CsharpSamples.PowerShellSample
             // 
             // btnGetChildItem
             // 
+            this.btnGetChildItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGetChildItem.Location = new System.Drawing.Point(694, 12);
             this.btnGetChildItem.Name = "btnGetChildItem";
             this.btnGetChildItem.Size = new System.Drawing.Size(94, 23);
@@ -51,6 +52,9 @@ namespace UnlimitedFairytales.CsharpSamples.PowerShellSample
             // 
             // txtOutput
             // 
+            this.txtOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOutput.Location = new System.Drawing.Point(12, 100);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
@@ -60,6 +64,7 @@ namespace UnlimitedFairytales.CsharpSamples.PowerShellSample
             // 
             // btnCd
             // 
+            this.btnCd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCd.Location = new System.Drawing.Point(694, 41);
             this.btnCd.Name = "btnCd";
             this.btnCd.Size = new System.Drawing.Size(94, 23);
@@ -70,6 +75,8 @@ namespace UnlimitedFairytales.CsharpSamples.PowerShellSample
             // 
             // txtCdParameter
             // 
+            this.txtCdParameter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCdParameter.Location = new System.Drawing.Point(12, 42);
             this.txtCdParameter.Name = "txtCdParameter";
             this.txtCdParameter.Size = new System.Drawing.Size(676, 23);
@@ -77,6 +84,8 @@ namespace UnlimitedFairytales.CsharpSamples.PowerShellSample
             // 
             // txtCurrentDirectoryOfPs
             // 
+            this.txtCurrentDirectoryOfPs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCurrentDirectoryOfPs.Location = new System.Drawing.Point(12, 12);
             this.txtCurrentDirectoryOfPs.Name = "txtCurrentDirectoryOfPs";
             this.txtCurrentDirectoryOfPs.ReadOnly = true;
