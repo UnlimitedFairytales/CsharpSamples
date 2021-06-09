@@ -18,13 +18,13 @@
 #
 # 【リモートホスト側の事前設定】
 # 設定 > ネットワークとインターネット > (Wifi > 現在接続中の接続、など) > ネットワークプロファイル：Private（＝信頼済み）にする
+# Set-PSSessionConfiguration Microsoft.PowerShell -ShowSecurityDescriptorUI
+#    使用したいリモートホスト側の管理者ユーザのフルコントロールを許可
+#    ※ 管理者ユーザでないとうまくいかない。接続しようとする時に、以下のエラーが出る
+#     新しいPSSession： [computerName]リモートサーバーlocalhostへの接続が失敗し、次のエラーメッセージが表示されました。WSManサービスは、指定された要求を処理するためのホストプロセスを起動できませんでした。 WSManプロバイダーのホストサーバーとプロキシが正しく登録されていることを確認してください。詳細については、about_Remote_Troubleshootingヘルプトピックを参照してください。」
 # Set-ExecutionPolicy RemoteSigned -Force
 # Set-WSManQuickConfig -Force
-# Enable-PSRemoting -Force
-# Set-PSSessionConfiguration Microsoft.PowerShell -ShowSecurityDescriptorUI
-#     使用したいリモートホスト側の管理者ユーザのフルコントロールを許可
-#     ※ 管理者ユーザでないとうまくいかない。接続しようとする時に、以下のエラーが出る
-#     新しいPSSession： [computerName]リモートサーバーlocalhostへの接続が失敗し、次のエラーメッセージが表示されました。WSManサービスは、指定された要求を処理するためのホストプロセスを起動できませんでした。 WSManプロバイダーのホストサーバーとプロキシが正しく登録されていることを確認してください。詳細については、about_Remote_Troubleshootingヘルプトピックを参照してください。」
+# Enable-PSRemoting -SkipNetworkProfileCheck -Force
 # FWの許可（例：Windows Defender）
 # New-NetFirewallRule -DisplayName "@RemotePowerShell-enable" -Program "%SystemRoot%\System32\svchost.exe" -Profile Private -Direction Inbound -Protocol TCP -LocalPort RPC -Action Allow
 #
