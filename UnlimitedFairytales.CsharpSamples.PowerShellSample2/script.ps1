@@ -23,11 +23,11 @@
 #    ※ もしリモートが自分自身（Localhostや自身のIP）の場合、リモートのユーザは管理者ユーザでかつ管理者としてPowerShellが実行されないとうまくいかない。接続しようとする時に、以下のエラーが出る
 #     新しいPSSession： [computerName]リモートサーバーlocalhostへの接続が失敗し、次のエラーメッセージが表示されました。WSManサービスは、指定された要求を処理するためのホストプロセスを起動できませんでした。 WSManプロバイダーのホストサーバーとプロキシが正しく登録されていることを確認してください。詳細については、about_Remote_Troubleshootingヘルプトピックを参照してください。」
 # Set-ExecutionPolicy RemoteSigned -Force
-# Set-WSManQuickConfig -Force
+# Set-WSManQuickConfig -SkipNetworkProfileCheck -Force
 # Enable-PSRemoting -SkipNetworkProfileCheck -Force
 # FWの許可（例：Windows Defender）
 # New-NetFirewallRule -DisplayName "@RemotePowerShell-enable" -Program "%SystemRoot%\System32\svchost.exe" -Profile Private -Direction Inbound -Protocol TCP -LocalPort RPC -Action Allow
-#
+# New-NetFirewallRule -DisplayName "@RemotePowerShell-enable" -Program "%SystemRoot%\System32\svchost.exe" -Profile Public -Direction Inbound -Protocol TCP -LocalPort RPC -Action Allow
 # 【ローカルクライアント側の事前設定】
 # Set-ExecutionPolicy RemoteSigned -Force
 # winrm quickconfig -force
