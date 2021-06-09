@@ -19,8 +19,8 @@
 # 【リモートホスト側の事前設定】
 # 設定 > ネットワークとインターネット > (Wifi > 現在接続中の接続、など) > ネットワークプロファイル：Private（＝信頼済み）にする
 # Set-PSSessionConfiguration Microsoft.PowerShell -ShowSecurityDescriptorUI
-#    使用したいリモートホスト側の管理者ユーザのフルコントロールを許可
-#    ※ 管理者ユーザでないとうまくいかない。接続しようとする時に、以下のエラーが出る
+#    使用したいリモートホスト側のユーザのフルコントロールを許可
+#    ※ もしリモートが自分自身（Localhostや自身のIP）の場合、リモートのユーザは管理者ユーザでかつ管理者としてPowerShellが実行されないとうまくいかない。接続しようとする時に、以下のエラーが出る
 #     新しいPSSession： [computerName]リモートサーバーlocalhostへの接続が失敗し、次のエラーメッセージが表示されました。WSManサービスは、指定された要求を処理するためのホストプロセスを起動できませんでした。 WSManプロバイダーのホストサーバーとプロキシが正しく登録されていることを確認してください。詳細については、about_Remote_Troubleshootingヘルプトピックを参照してください。」
 # Set-ExecutionPolicy RemoteSigned -Force
 # Set-WSManQuickConfig -Force
@@ -47,7 +47,7 @@ function MakePSCredential( $ID, $PlainPassword ){
     Return $Credential
 }
 $Credential = MakePSCredential "PowerShellTestUser" "p@55w0rd"
-$TargetServer = "192.168.3.8"
+$TargetServer = "192.168.3.2"
 $PSSession = New-PSSession $TargetServer -Credential $Credential
 Invoke-Command -Session $PSSession -ScriptBlock { cd $env:userprofile\desktop }
 Invoke-Command -Session $PSSession -ScriptBlock { .\sample.ps1 }
