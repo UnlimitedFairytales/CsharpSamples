@@ -25,13 +25,20 @@
 # Set-ExecutionPolicy RemoteSigned -Force
 # Set-WSManQuickConfig -SkipNetworkProfileCheck -Force
 # Enable-PSRemoting -SkipNetworkProfileCheck -Force
-# FWの許可（例：Windows Defender）
+# # FWの許可（例：Windows Defender）
 # New-NetFirewallRule -DisplayName "@RemotePowerShell-enable" -Program "%SystemRoot%\System32\svchost.exe" -Profile Private -Direction Inbound -Protocol TCP -LocalPort RPC -Action Allow
 # New-NetFirewallRule -DisplayName "@RemotePowerShell-enable" -Program "%SystemRoot%\System32\svchost.exe" -Profile Public -Direction Inbound -Protocol TCP -LocalPort RPC -Action Allow
+# # リモート先がさらにネットワークドライブにアクセスしたり、多段ログインしたい場合、2nd hopを許可する（リモートデスクトップでは特に制限されていないが、PowerShellだとなぜかデフォルトで未許可）
+# # なお、PSSessionを開始する際には、 -Authentication Credssp引数を明示的に指定する必要もある
+# # https://devblogs.microsoft.com/scripting/enable-powershell-second-hop-functionality-with-credssp/
+# Enable-WSManCredSSP -Role Server -Force
+#
 # 【ローカルクライアント側の事前設定】
 # Set-ExecutionPolicy RemoteSigned -Force
 # winrm quickconfig -force
 # Set-Item WSMan:\localhost\Client\TrustedHosts <リモートのIP> -Force
+# # 2nd hop対応する場合
+# Enable-WSManCredSSP -Role Client -DelegateComputer * -Force
 #
 # 【sample.ps1】
 # $sum = 0;
@@ -48,6 +55,7 @@ function MakePSCredential( $ID, $PlainPassword ){
 }
 $Credential = MakePSCredential "PowerShellTestUser" "p@55w0rd"
 $TargetServer = "192.168.3.2"
+# $PSSession = New-PSSession $TargetServer -Credential $Credential -Authentication Credssp
 $PSSession = New-PSSession $TargetServer -Credential $Credential
 Invoke-Command -Session $PSSession -ScriptBlock { cd $env:userprofile\desktop }
 Invoke-Command -Session $PSSession -ScriptBlock { .\sample.ps1 }
