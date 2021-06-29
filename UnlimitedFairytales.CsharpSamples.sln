@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.PowerShellSample", "UnlimitedFairytales.CsharpSamples.PowerShellSample\UnlimitedFairytales.CsharpSamples.PowerShellSample.csproj", "{830C11E2-6415-4A6B-940A-7FE44F48FF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.PowerShellSample2", "UnlimitedFairytales.CsharpSamples.PowerShellSample2\UnlimitedFairytales.CsharpSamples.PowerShellSample2.csproj", "{521A137F-FBEC-441F-86E0-0D371F54E62D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.PowerShellSample2", "UnlimitedFairytales.CsharpSamples.PowerShellSample2\UnlimitedFairytales.CsharpSamples.PowerShellSample2.csproj", "{521A137F-FBEC-441F-86E0-0D371F54E62D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample", "UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample\UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample.csproj", "{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{521A137F-FBEC-441F-86E0-0D371F54E62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{521A137F-FBEC-441F-86E0-0D371F54E62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{521A137F-FBEC-441F-86E0-0D371F54E62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

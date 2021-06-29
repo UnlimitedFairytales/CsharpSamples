@@ -1,0 +1,20 @@
+﻿{
+	"StringSample": "This is string",
+	"IntSample": 12345,
+	"BoolSample": true,
+	"StringArraySample": [ "This", "is", "string" ],
+	"ClassSample": {
+		"Id": 0,
+		"Name": "Zero"
+	},
+	"ClassArraySample": [
+		{
+			"Id": 1,
+			"Name": "Alice"
+		},
+		{
+			"Id": 2,
+			"Name": "Bob"
+		}
+	]
+}
