@@ -10,6 +10,7 @@ namespace UnlimitedFairytales.CsharpSamples.log4net
             var logger = Log4netExtension.GetLogger(null, typeof(Program));
             try
             {
+                logger.Debug("debugログ");
                 throw new Exception();
             }
             catch (Exception ex)
@@ -17,7 +18,7 @@ namespace UnlimitedFairytales.CsharpSamples.log4net
                 GlobalContext.Properties["UserId"] = "12345";
                 for (int i = 0; i < 100; i++)
                 {
-                    logger.Debug($"メッセージ{i}", ex);
+                    logger.Error($"メッセージ{i}", ex);
                 }
             }
         }
