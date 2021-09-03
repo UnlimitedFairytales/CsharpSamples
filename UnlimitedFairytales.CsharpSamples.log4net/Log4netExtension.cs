@@ -10,17 +10,17 @@ namespace UnlimitedFairytales.CsharpSamples.log4net
     {
         static Log4netExtension()
         {
-            loggerAssembly = Assembly.GetEntryAssembly();
-            var loggerRepository = LogManager.GetRepository(loggerAssembly);
+            entryPointAssembly = Assembly.GetEntryAssembly();
+            var loggerRepository = LogManager.GetRepository(entryPointAssembly);
             var fileInfo = new FileInfo("log4net.config.xml");
             XmlConfigurator.Configure(loggerRepository, fileInfo);
         }
 
-        private static Assembly loggerAssembly;
+        private static Assembly entryPointAssembly;
 
         public static ILog GetLogger(this object obj, string loggerName)
         {
-            return LogManager.GetLogger(loggerAssembly, loggerName);
+            return LogManager.GetLogger(entryPointAssembly, loggerName);
         }
 
         public static ILog GetLogger(this object obj, Type type = null)
