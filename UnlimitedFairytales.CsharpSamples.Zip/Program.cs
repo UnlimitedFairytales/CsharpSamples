@@ -13,6 +13,11 @@ namespace UnlimitedFairytales.CsharpSamples.Zip
             {
                 zipArchive.ExtractToDirectory("./unzipped/", true);
             }
+            {
+                var path = "./zipTarget";
+                var name = "zipped.zip";
+                ZipFile.CreateFromDirectory(path, name);
+            }
         }
     }
 }
