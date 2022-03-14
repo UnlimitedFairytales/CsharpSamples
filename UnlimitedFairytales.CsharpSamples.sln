@@ -29,10 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Postgres", "UnlimitedFairytales.CsharpSamples.Postgres\UnlimitedFairytales.CsharpSamples.Postgres.csproj", "{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.UtilitySamples", "UnlimitedFairytales.CsharpSamples.UtilitySamples\UnlimitedFairytales.CsharpSamples.UtilitySamples.csproj", "{B84B377D-D038-4796-9965-FC7FBF89EAE4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests", "UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests\UnlimitedFairytales.CsharpSamples.UtilitySamples.Tests.csproj", "{358A7117-29D5-4713-9D49-BEADF606FE9A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.FormUtilitySamples", "UnlimitedFairytales.CsharpSamples.FormUtilitySamples\UnlimitedFairytales.CsharpSamples.FormUtilitySamples.csproj", "{5D432B2B-F7DC-4F64-A7C2-CBB11604CC3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.ResxSample", "UnlimitedFairytales.CsharpSamples.ResxSample\UnlimitedFairytales.CsharpSamples.ResxSample.csproj", "{416BF993-B559-43AC-BF99-3C5E26A623B0}"
@@ -45,8 +41,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample", "UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample\UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample.csproj", "{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.MailKitSample", "UnlimitedFairytales.CsharpSamples.MailKitSample\UnlimitedFairytales.CsharpSamples.MailKitSample.csproj", "{D91FF0F3-F4EA-41C9-90AB-8761E5497FCE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.ImageSharpSample", "UnlimitedFairytales.CsharpSamples.ImageSharpSample\UnlimitedFairytales.CsharpSamples.ImageSharpSample.csproj", "{A3B76BE0-6074-41D4-B642-B1919B8B5B94}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.Zip", "UnlimitedFairytales.CsharpSamples.Zip\UnlimitedFairytales.CsharpSamples.Zip.csproj", "{E74E6EF0-099E-4FCE-9487-73193F3722EC}"
@@ -57,7 +51,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpSamples.log4net", "UnlimitedFairytales.CsharpSamples.log4net", "{C3DE2C0A-A8F3-4D61-9280-D27B8B53A5DA}"
 	ProjectSection(SolutionItems) = preProject
-		readme.txt = readme.txt
+		log4netSample.txt = log4netSample.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpSamples.CsvHelper", "UnlimitedFairytales.CsharpSamples.CsvHelper", "{27AC797F-8125-499B-8DCE-87B45D71FA55}"
+	ProjectSection(SolutionItems) = preProject
+		CsvHelperSample.txt = CsvHelperSample.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpSamples.MailKit", "UnlimitedFairytales.CsharpSamples.MailKit", "{8BA473D8-AC33-4BCA-9479-5D1AFB4B851C}"
+	ProjectSection(SolutionItems) = preProject
+		MailKitSample.txt = MailKitSample.txt
 	EndProjectSection
 EndProject
 Global
@@ -118,14 +122,6 @@ Global
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E5FC89-93AC-45E7-8906-AEBA71DF52E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B84B377D-D038-4796-9965-FC7FBF89EAE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{358A7117-29D5-4713-9D49-BEADF606FE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{358A7117-29D5-4713-9D49-BEADF606FE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{358A7117-29D5-4713-9D49-BEADF606FE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{358A7117-29D5-4713-9D49-BEADF606FE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D432B2B-F7DC-4F64-A7C2-CBB11604CC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D432B2B-F7DC-4F64-A7C2-CBB11604CC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D432B2B-F7DC-4F64-A7C2-CBB11604CC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -150,10 +146,6 @@ Global
 		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7E06BD6-51E6-41D5-8D0B-351B37A9FAE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D91FF0F3-F4EA-41C9-90AB-8761E5497FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D91FF0F3-F4EA-41C9-90AB-8761E5497FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D91FF0F3-F4EA-41C9-90AB-8761E5497FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D91FF0F3-F4EA-41C9-90AB-8761E5497FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3B76BE0-6074-41D4-B642-B1919B8B5B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3B76BE0-6074-41D4-B642-B1919B8B5B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3B76BE0-6074-41D4-B642-B1919B8B5B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
