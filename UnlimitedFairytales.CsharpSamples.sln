@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncConsole", "UnlimitedFairytales.CsharpSamples.AsyncConsole\UnlimitedFairytales.CsharpSamples.AsyncConsole.csproj", "{1C8EF3EF-D562-4AB2-843E-46BF24194445}"
 EndProject
@@ -20,8 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.OracleWithDapper", "UnlimitedFairytales.CsharpSamples.OracleWithDapper\UnlimitedFairytales.CsharpSamples.OracleWithDapper.csproj", "{7067FD5B-B2A2-48FC-9B6E-17EB1D7C8D1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Http", "UnlimitedFairytales.CsharpSamples.Http\UnlimitedFairytales.CsharpSamples.Http.csproj", "{0254BC35-5A70-4AE1-B1FB-71C7532ABD20}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.log4net", "UnlimitedFairytales.CsharpSamples.log4net\UnlimitedFairytales.CsharpSamples.log4net.csproj", "{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.SQLite", "UnlimitedFairytales.CsharpSamples.SQLite\UnlimitedFairytales.CsharpSamples.SQLite.csproj", "{687C2D67-244B-4B1C-8248-8D6272C2687D}"
 EndProject
@@ -55,7 +53,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.Rx", "UnlimitedFairytales.CsharpSamples.Rx\UnlimitedFairytales.CsharpSamples.Rx.csproj", "{D8A44003-4941-415F-A675-B6F2B54B2235}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling", "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling\UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling.csproj", "{1C5EFC70-EE30-45B9-A930-33F47734E4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling", "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling\UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling.csproj", "{1C5EFC70-EE30-45B9-A930-33F47734E4B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpSamples.log4net", "UnlimitedFairytales.CsharpSamples.log4net", "{C3DE2C0A-A8F3-4D61-9280-D27B8B53A5DA}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,10 +102,6 @@ Global
 		{0254BC35-5A70-4AE1-B1FB-71C7532ABD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0254BC35-5A70-4AE1-B1FB-71C7532ABD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0254BC35-5A70-4AE1-B1FB-71C7532ABD20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BE7CA6B-4A4B-4844-8531-080CCAE81BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{687C2D67-244B-4B1C-8248-8D6272C2687D}.Release|Any CPU.ActiveCfg = Release|Any CPU
