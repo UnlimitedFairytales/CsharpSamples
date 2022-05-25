@@ -76,7 +76,7 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncConsole
         static async Task Do2Async(string name, int wait, bool configureAwait)
         {
             var self = nameof(Do2Async);
-            Log($"{name} {self} begin");
+            Log($"{name} {self} begin as ConfigureAwait={configureAwait}");
             await Task.Delay(wait);
             await Do3Async(name, wait, configureAwait).ConfigureAwait(configureAwait);
             Log($"{name} {self} end");
@@ -86,7 +86,7 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncConsole
         static async Task Do3Async(string name, int wait, bool configureAwait)
         {
             var self = nameof(Do3Async);
-            Log($"{name} {self} begin");
+            Log($"{name} {self} begin as ConfigureAwait={configureAwait}");
             await Task.Run(() => {
                 Log($"{name} {self} inner task before sleep.");
                 System.Threading.Thread.Sleep(wait);
