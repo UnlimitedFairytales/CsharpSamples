@@ -47,8 +47,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.Rx", "UnlimitedFairytales.CsharpSamples.Rx\UnlimitedFairytales.CsharpSamples.Rx.csproj", "{D8A44003-4941-415F-A675-B6F2B54B2235}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling", "UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling\UnlimitedFairytales.CsharpSamples.AsyncExceptionHandling.csproj", "{1C5EFC70-EE30-45B9-A930-33F47734E4B7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpSamples.log4net", "UnlimitedFairytales.CsharpSamples.log4net", "{C3DE2C0A-A8F3-4D61-9280-D27B8B53A5DA}"
 	ProjectSection(SolutionItems) = preProject
 		log4netSample.txt = log4netSample.txt
@@ -63,6 +61,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpS
 	ProjectSection(SolutionItems) = preProject
 		MailKitSample.txt = MailKitSample.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling", "UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling\UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling.csproj", "{6014A46E-A981-4009-9CE2-57FE4B4C9628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,10 +158,10 @@ Global
 		{D8A44003-4941-415F-A675-B6F2B54B2235}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8A44003-4941-415F-A675-B6F2B54B2235}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8A44003-4941-415F-A675-B6F2B54B2235}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C5EFC70-EE30-45B9-A930-33F47734E4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C5EFC70-EE30-45B9-A930-33F47734E4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C5EFC70-EE30-45B9-A930-33F47734E4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C5EFC70-EE30-45B9-A930-33F47734E4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6014A46E-A981-4009-9CE2-57FE4B4C9628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6014A46E-A981-4009-9CE2-57FE4B4C9628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6014A46E-A981-4009-9CE2-57FE4B4C9628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6014A46E-A981-4009-9CE2-57FE4B4C9628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
