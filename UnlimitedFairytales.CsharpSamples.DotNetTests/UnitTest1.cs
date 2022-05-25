@@ -8,7 +8,10 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
         [Fact]
         public void MailAddressFormatTest1()
         {
-            // "()\@[];:,.<>
+            // OK
+            // !#$%&'-=^~|`{+*}/?_
+            // NG
+            // "()\@[;:],<.>
             new System.Net.Mail.MailAddress("!a@c");
             Assert.Throws<FormatException>(() => new System.Net.Mail.MailAddress("\"a@c"));
             new System.Net.Mail.MailAddress("#a@c");
@@ -52,7 +55,10 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
         [Fact]
         public void MailAddressFormatTest3()
         {
-            // "()\@[];:,.<>
+            // OK
+            // !#$%&'-=^~|`{+*}/?_
+            // NG
+            // "()\@[;:],<.>
             new System.Net.Mail.MailAddress("a@!c");
             Assert.Throws<FormatException>(() => new System.Net.Mail.MailAddress("a@\"c"));
             new System.Net.Mail.MailAddress("a@#c");
@@ -89,7 +95,7 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
         [Fact]
         public void MailAddressFormatTest4()
         {
-            // 255
+            // 255 chars @c
             new System.Net.Mail.MailAddress(
                 "12345678901234567890123456789012345678901234567890" +
                 "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij" +
@@ -98,6 +104,7 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
                 "12345678901234567890123456789012345678901234567890" +
                 "12345" + 
                 "@c");
+            // 256 chars @c
             new System.Net.Mail.MailAddress(
                 "12345678901234567890123456789012345678901234567890" +
                 "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij" +
@@ -106,7 +113,7 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
                 "12345678901234567890123456789012345678901234567890" +
                 "123456" +
                 "@c");
-            // 255
+            // a@ 255 chars
             new System.Net.Mail.MailAddress(
                 "a@" + 
                 "12345678901234567890123456789012345678901234567890" +
@@ -115,7 +122,7 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
                 "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij" +
                 "12345678901234567890123456789012345678901234567890" +
                 "12345");
-            // 256
+            // a@ 256 chars
             new System.Net.Mail.MailAddress(
                 "a@" +
                 "12345678901234567890123456789012345678901234567890" +
@@ -124,6 +131,7 @@ namespace UnlimitedFairytales.CsharpSamples.DotNetTests
                 "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij" +
                 "12345678901234567890123456789012345678901234567890" +
                 "123456");
+            // 256 chars @ 256 chars
             new System.Net.Mail.MailAddress(
                 "12345678901234567890123456789012345678901234567890" +
                 "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij" +
