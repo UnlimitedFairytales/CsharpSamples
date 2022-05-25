@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncForm", "UnlimitedFairytales.CsharpSamples.AsyncForm\UnlimitedFairytales.CsharpSamples.AsyncForm.csproj", "{37002D4A-C809-4577-9397-B52C6CAFDDD6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.UIExceptionHandling", "UnlimitedFairytales.CsharpSamples.UIExceptionHandling\UnlimitedFairytales.CsharpSamples.UIExceptionHandling.csproj", "{B7A2F267-637E-4FF2-944A-CC2A7DF3E662}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Forms", "UnlimitedFairytales.CsharpSamples.Forms\UnlimitedFairytales.CsharpSamples.Forms.csproj", "{A11554A0-C9F3-499D-9CE2-329A00FEAF49}"
@@ -62,9 +60,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling", "UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling\UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling.csproj", "{6014A46E-A981-4009-9CE2-57FE4B4C9628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.Common", "UnlimitedFairytales.CsharpSamples.Common\UnlimitedFairytales.CsharpSamples.Common.csproj", "{004FB6AD-4222-4F2D-B994-EBE9D2740F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.Common", "UnlimitedFairytales.CsharpSamples.Common\UnlimitedFairytales.CsharpSamples.Common.csproj", "{004FB6AD-4222-4F2D-B994-EBE9D2740F5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncConsole", "UnlimitedFairytales.CsharpSamples.AsyncConsole\UnlimitedFairytales.CsharpSamples.AsyncConsole.csproj", "{F52DF3A9-279B-4516-82A8-80FA80BCF8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.AsyncConsole", "UnlimitedFairytales.CsharpSamples.AsyncConsole\UnlimitedFairytales.CsharpSamples.AsyncConsole.csproj", "{F52DF3A9-279B-4516-82A8-80FA80BCF8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.AsyncForm", "UnlimitedFairytales.CsharpSamples.AsyncForm\UnlimitedFairytales.CsharpSamples.AsyncForm.csproj", "{52CDE3A9-A683-4C32-801E-261E5EC10F15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,10 +72,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37002D4A-C809-4577-9397-B52C6CAFDDD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37002D4A-C809-4577-9397-B52C6CAFDDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37002D4A-C809-4577-9397-B52C6CAFDDD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37002D4A-C809-4577-9397-B52C6CAFDDD6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7A2F267-637E-4FF2-944A-CC2A7DF3E662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7A2F267-637E-4FF2-944A-CC2A7DF3E662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A2F267-637E-4FF2-944A-CC2A7DF3E662}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -168,6 +164,10 @@ Global
 		{F52DF3A9-279B-4516-82A8-80FA80BCF8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F52DF3A9-279B-4516-82A8-80FA80BCF8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F52DF3A9-279B-4516-82A8-80FA80BCF8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CDE3A9-A683-4C32-801E-261E5EC10F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CDE3A9-A683-4C32-801E-261E5EC10F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CDE3A9-A683-4C32-801E-261E5EC10F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CDE3A9-A683-4C32-801E-261E5EC10F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
