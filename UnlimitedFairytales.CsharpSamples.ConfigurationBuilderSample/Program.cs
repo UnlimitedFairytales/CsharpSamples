@@ -10,12 +10,8 @@ namespace UnlimitedFairytales.CsharpSamples.ConfigurationBuilderSample
             var setting = new Setting();
             var options = new JsonSerializerOptions();
             options.IncludeFields = true;
+            options.WriteIndented = true;
             var text = JsonSerializer.Serialize<Setting>(setting, options);
-            text = text.Replace("[", "[" + Environment.NewLine);
-            text = text.Replace("]", Environment.NewLine + "]");
-            text = text.Replace("{", "{" + Environment.NewLine);
-            text = text.Replace("}", Environment.NewLine + "}");
-            text = text.Replace(",", "," + Environment.NewLine);
             Console.WriteLine(text);
             Console.ReadKey();
         }
