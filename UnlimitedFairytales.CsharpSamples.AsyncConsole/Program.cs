@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
+using UnlimitedFairytales.CsharpSamples.Common;
 
 namespace UnlimitedFairytales.CsharpSamples.AsyncConsole
 {
     class Program
     {
-        static void Log(string msg = "")
-        {
-            var dateTime = DateTime.Now.ToString("HH:mm:ss.fff");
-            var threadId = "threadId=" + System.Threading.Thread.CurrentThread.ManagedThreadId;
-            System.Diagnostics.Trace.WriteLine($"{dateTime} {threadId} {msg}");
-        }
-
         // Project > build > advanced settings > Language Version > latest miner(C#7.1 <=)
         // "async Task Main" is alias for Task.GetAwaiter().GetResult()
         static async Task Main(string[] args)
@@ -42,58 +36,25 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncConsole
                  * In this state, WindowsFormsSynchronizationContext.Post() (It is called by completing of await) don't work.
                  */
                 Console.WriteLine("Deadlock sample.");
-                Log("before new From : Current=" + System.Threading.SynchronizationContext.Current);
+                Helper.Log("before new From : Current=" + System.Threading.SynchronizationContext.Current);
                 var frm = new System.Windows.Forms.Form();
-                Log("after  new From : Current=" + System.Threading.SynchronizationContext.Current);
+                Helper.Log("after  new From : Current=" + System.Threading.SynchronizationContext.Current);
                 await Task.Delay(1000); // dead lock!
             }
-            Log();
+            Helper.Log();
 
-            Log("1st begin.");
-            await Do1Async("1st", 500, true);
-            Log("1st end.");
-            Log("2nd begin.");
-            await Do1Async("2nd", 1000, true);
-            Log("2nd end.");
-            Log("3rd begin.");
-            await Do1Async("3rd", 1500, true);
-            Log("3rd end.");
+            Helper.Log("1st begin.");
+            await AsyncSample.Do1Async("1st", 500, true);
+            Helper.Log("1st end.");
+            Helper.Log("2nd begin.");
+            await AsyncSample.Do1Async("2nd", 1000, true);
+            Helper.Log("2nd end.");
+            Helper.Log("3rd begin.");
+            await AsyncSample.Do1Async("3rd", 1500, true);
+            Helper.Log("3rd end.");
 
             Console.WriteLine("All complete.");
             Console.ReadKey();
-        }
-
-        static async Task Do1Async(string name, int wait, bool configureAwait)
-        {
-            var self = nameof(Do1Async);
-            Log($"{name} {self} begin");
-            await Task.Delay(wait);
-            await Do2Async(name, wait, configureAwait).ConfigureAwait(configureAwait);
-            Log($"{name} {self} end");
-            return;
-        }
-
-        static async Task Do2Async(string name, int wait, bool configureAwait)
-        {
-            var self = nameof(Do2Async);
-            Log($"{name} {self} begin as ConfigureAwait={configureAwait}");
-            await Task.Delay(wait);
-            await Do3Async(name, wait, configureAwait).ConfigureAwait(configureAwait);
-            Log($"{name} {self} end");
-            return;
-        }
-
-        static async Task Do3Async(string name, int wait, bool configureAwait)
-        {
-            var self = nameof(Do3Async);
-            Log($"{name} {self} begin as ConfigureAwait={configureAwait}");
-            await Task.Run(() => {
-                Log($"{name} {self} inner task before sleep.");
-                System.Threading.Thread.Sleep(wait);
-                Log($"{name} {self} inner task after sleep.");
-            }).ConfigureAwait(configureAwait);
-            Log($"{name} {self} end");
-            return;
         }
     }
 }
