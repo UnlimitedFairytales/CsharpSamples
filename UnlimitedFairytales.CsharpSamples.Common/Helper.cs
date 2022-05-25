@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace UnlimitedFairytales.CsharpSamples.Common
 {
@@ -9,6 +10,12 @@ namespace UnlimitedFairytales.CsharpSamples.Common
             var dateTime = DateTime.Now.ToString("HH:mm:ss.fff");
             var threadId = "threadId=" + System.Threading.Thread.CurrentThread.ManagedThreadId;
             System.Diagnostics.Trace.WriteLine($"{dateTime} {threadId} {msg}");
+        }
+
+        public static void ShowWithLog(string msg = "")
+        {
+            Helper.Log(msg);
+            MessageBox.Show(msg);
         }
     }
 }

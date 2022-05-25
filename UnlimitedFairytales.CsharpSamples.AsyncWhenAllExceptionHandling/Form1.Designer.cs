@@ -100,10 +100,10 @@
 
         #endregion
 
-        private Button btnDoAsync;
-        private Button btnCountUp;
-        private TextBox txtCount;
-        private Button btnChangeMode;
-        private TextBox txtMode;
+        private System.Windows.Forms.Button btnDoAsync;
+        private System.Windows.Forms.Button btnCountUp;
+        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.Button btnChangeMode;
+        private System.Windows.Forms.TextBox txtMode;
     }
 }

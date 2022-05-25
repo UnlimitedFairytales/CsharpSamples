@@ -1,3 +1,6 @@
+﻿using System;
+using System.Windows.Forms;
+
 namespace UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling
 {
     internal static class Program

@@ -1,3 +1,10 @@
+ï»¿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using UnlimitedFairytales.CsharpSamples.Common;
+
 namespace UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling
 {
     public partial class Form1 : Form
@@ -8,14 +15,14 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling
             this.raisesException = false;
         }
 
-        private@async void btnDoAsync_Click(object sender, EventArgs e)
+        privateã€€async void btnDoAsync_Click(object sender, EventArgs e)
         {
             try
             {
                 this.btnChangeMode.Enabled = false;
                 var results = await DoAsync(raisesException);
                 var text = results.Aggregate((a, b) => a + Environment.NewLine + b);
-                MessageBox.Show($"{text}");
+                Helper.ShowWithLog($"{text}");
             }
             catch (Exception ex)
             {
@@ -25,12 +32,12 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling
                 {
                     foreach (var innerEx in inners)
                     {
-                        MessageBox.Show($"{innerEx.Message}{nl}{innerEx.StackTrace}");
+                        Helper.ShowWithLog($"{innerEx.Message}{nl}{innerEx.StackTrace}");
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"{ex.Message}{nl}{ex.StackTrace}");
+                    Helper.ShowWithLog($"{ex.Message}{nl}{ex.StackTrace}");
                 }
             }
             finally
@@ -98,20 +105,20 @@ namespace UnlimitedFairytales.CsharpSamples.AsyncWhenAllExceptionHandling
                     }
                     return $"finish({i})";
                 }));
-                // async/await‚Å‚»‚Ì‚Ü‚Ü“`”d‚³‚¹‚½ê‡AŠeTask“à‚Å—áŠO‚ª”­¶‚µ‚½AÅ‰‚Ìˆê‚Â‚µ‚©•ñ‚³‚ê‚È‚¢
-                // ‘S‚Ä‚Ìtask“à—áŠO‚ğ•â‘«‚·‚é‚É‚ÍA—\‚ßtaskƒŠƒXƒg‚ğ•Ï”‚Å•Û‚µ‚Ä‚¨‚«Atrycatch‚ÅˆÍ‚ñ‚¾ã‚ÅtaskList‚©‚ç—áŠOó‹µ‚ğæ“¾‚µ‚Ä‚»‚ê‚ğthrow‚·‚é
+                // async/awaitã§ãã®ã¾ã¾ä¼æ’­ã•ã›ãŸå ´åˆã€å„Taskå†…ã§ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸæ™‚ã€æœ€åˆã®ä¸€ã¤ã—ã‹å ±å‘Šã•ã‚Œãªã„
+                // å…¨ã¦ã®taskå†…ä¾‹å¤–ã‚’è£œè¶³ã™ã‚‹ã«ã¯ã€äºˆã‚taskãƒªã‚¹ãƒˆã‚’å¤‰æ•°ã§ä¿æŒã—ã¦ãŠãã€trycatchã§å›²ã‚“ã ä¸Šã§taskListã‹ã‚‰ä¾‹å¤–çŠ¶æ³ã‚’å–å¾—ã—ã¦ãã‚Œã‚’throwã™ã‚‹
                 return await Task.WhenAll(taskList);
             }
             catch (Exception)
             {
-#pragma warning disable CS8602 // null QÆ‚Ì‰Â”\«‚ª‚ ‚é‚à‚Ì‚Ì‹tQÆ‚Å‚·B
+#pragma warning disable CS8602 // null å‚ç…§ã®å¯èƒ½æ€§ãŒã‚ã‚‹ã‚‚ã®ã®é€†å‚ç…§ã§ã™ã€‚
                 var inners = taskList
                     .Where(task => task.IsFaulted && task.Exception != null && task.Exception.InnerException != null)
                     .Select(task => task.Exception.InnerException);
-#pragma warning restore CS8602 // null QÆ‚Ì‰Â”\«‚ª‚ ‚é‚à‚Ì‚Ì‹tQÆ‚Å‚·B
-#pragma warning disable CS8620 // QÆŒ^‚Ì NULL ’l‚Ì‹–—e‚Ìˆá‚¢‚É‚æ‚èAƒpƒ‰ƒ[ƒ^[‚Éˆø”‚ğg—p‚Å‚«‚Ü‚¹‚ñB
+#pragma warning restore CS8602 // null å‚ç…§ã®å¯èƒ½æ€§ãŒã‚ã‚‹ã‚‚ã®ã®é€†å‚ç…§ã§ã™ã€‚
+#pragma warning disable CS8620 // å‚ç…§å‹ã® NULL å€¤ã®è¨±å®¹ã®é•ã„ã«ã‚ˆã‚Šã€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã«å¼•æ•°ã‚’ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚
                 throw new AggregateException(inners);
-#pragma warning restore CS8620 // QÆŒ^‚Ì NULL ’l‚Ì‹–—e‚Ìˆá‚¢‚É‚æ‚èAƒpƒ‰ƒ[ƒ^[‚Éˆø”‚ğg—p‚Å‚«‚Ü‚¹‚ñB
+#pragma warning restore CS8620 // å‚ç…§å‹ã® NULL å€¤ã®è¨±å®¹ã®é•ã„ã«ã‚ˆã‚Šã€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã«å¼•æ•°ã‚’ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚
             }
         }
     }
