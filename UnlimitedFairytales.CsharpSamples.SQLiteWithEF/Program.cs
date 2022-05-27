@@ -15,6 +15,8 @@ namespace UnlimitedFairytales.CsharpSamples.SQLiteWithEF
     </providers>
   </entityFramework>
   ...
+
+     *
      * 2. 別途、App.configに接続設定の追記も必要
   <connectionStrings>
     <add name="Sample" providerName="System.Data.SQLite.EF6" connectionString="Data Source=DB\sqlite.db" />

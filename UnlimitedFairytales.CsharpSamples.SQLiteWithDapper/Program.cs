@@ -32,6 +32,10 @@ namespace UnlimitedFairytales.CsharpSamples.SQLiteWithDapper
             Console.ReadKey();
         }
 
+        // レガシ.NET Framework + System.Data.SQLiteではCodeFirstをサポートしていないため、手動作成が必要（別途野良OSSはあるが）
+        // これはEntity Frameworkの作法（DbContextで接続処理等が隠蔽されている）時、とても面倒になる
+        // SQLite CreateDatabase not supported error
+        // https://stackoverflow.com/questions/8505999/sqlite-createdatabase-not-supported-error
         static SQLiteConnection CreateDbFileAndOpen(string dbFilePath)
         {
             var dirPath = Path.GetDirectoryName(DB_FILE_PATH);
