@@ -66,7 +66,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.AsyncForm", "UnlimitedFairytales.CsharpSamples.AsyncForm\UnlimitedFairytales.CsharpSamples.AsyncForm.csproj", "{52CDE3A9-A683-4C32-801E-261E5EC10F15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods", "UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods\UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods.csproj", "{92D38D61-7CD8-4C95-BF41-4A6F23B2D76E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods", "UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods\UnlimitedFairytales.CsharpSamples.DefaultInterfaceMethods.csproj", "{92D38D61-7CD8-4C95-BF41-4A6F23B2D76E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnlimitedFairytales.CsharpSamples.JsonSample", "UnlimitedFairytales.CsharpSamples.JsonSample\UnlimitedFairytales.CsharpSamples.JsonSample.csproj", "{401D40CB-0F02-4D89-B08B-D51F005A9C0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -174,6 +176,10 @@ Global
 		{92D38D61-7CD8-4C95-BF41-4A6F23B2D76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92D38D61-7CD8-4C95-BF41-4A6F23B2D76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92D38D61-7CD8-4C95-BF41-4A6F23B2D76E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401D40CB-0F02-4D89-B08B-D51F005A9C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401D40CB-0F02-4D89-B08B-D51F005A9C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401D40CB-0F02-4D89-B08B-D51F005A9C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401D40CB-0F02-4D89-B08B-D51F005A9C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
