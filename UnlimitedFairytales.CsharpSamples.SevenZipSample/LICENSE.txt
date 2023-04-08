@@ -1,0 +1,11 @@
+﻿This program has dynamic links to the following libraries:
+
+7z.dll
+"GNU LGPL" + "GNU LGPL" with "unRAR license restriction" + "BSD 3-clause License"
+.\lib\7-Zip\License.txt
+https://7-zip.org/
+
+squid-box/SevenZipSharp
+LGPL-3.0-only
+https://github.com/squid-box/SevenZipSharp/blob/dev/license
+https://github.com/squid-box/SevenZipSharp
