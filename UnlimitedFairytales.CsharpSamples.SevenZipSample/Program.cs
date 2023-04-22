@@ -40,6 +40,8 @@ namespace UnlimitedFairytales.CsharpSamples.SevenZipSample
                 FileStream stream = new FileStream(zipPath, FileMode.Open, FileAccess.Read);
                 UnzipAsFlat(stream, outputPath);
             }
+            Console.WriteLine("デスクトップにsample-texts.zip、sample-texts-nested.zipを展開しました");
+            Console.ReadKey();
         }
 
         static void Unzip(FileStream stream, string outputDirPath)
