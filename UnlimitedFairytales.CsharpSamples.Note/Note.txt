@@ -2,7 +2,7 @@
 Standard < fw < Core
 
 【代表的なライブラリ】
-Json  : DataContractJsonSerializer     vs Json.NET  vs Utf8Json
+Json  : DataContractJsonSerializer     vs Json.NET  vs System.Text.Json ※Utf8Jsonは本家はアーカイブされました
 CSV   : TextFieldParser                vs CsvHelper
 Excel : Microsoft.Office.Interop.Excel vs EPPlus
 Http  : HtmlClient                     vs RestSharp
@@ -19,7 +19,6 @@ QR    : ZXing.Net
 	・DataSet/TableAdapterから生成されるSQLだけ取得
 	・ADO.NET 2.0 型付きDataSet。サーバエクスプローラ > 新しい項目でDataset追加 > D&D
 	・ADO.NET 4.0 Entity Framework。DBファースト vs ER図ファースト vs コードファースト
-・ファイル設定Sectionサンプル
 ・SQLについて、DDL発行ViaDDLファイル
 
 【GcMultiRow】
