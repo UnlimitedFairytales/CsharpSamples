@@ -18,6 +18,8 @@ namespace UnlimitedFairytales.CsharpSamples.Zip
                 var name = "zipped.zip";
                 ZipFile.CreateFromDirectory(path, name);
             }
+            Console.WriteLine("実行ファイルの横にsample-image.zipは展開され、zipTargetは圧縮されました。");
+            Console.ReadKey();
         }
     }
 }
