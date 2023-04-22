@@ -17,15 +17,29 @@ namespace UnlimitedFairytales.CsharpSamples.OracleWithDapper
             MessageBox.Show("oracle with dapper");
             var conn = new OracleConnection();
             conn.ConnectionString = "User ID=foo; Password=bar; Data Source=192.168.3.251:1521/dev";
-            conn.Open();
-            var results = conn.Query("select id, name from accounts");
-            foreach (var r in results)
+            try
             {
-                var str = $"id:{r.ID}, name:{r.NAME}"; // Oracleは既定ではselect文の記述に関係なく大文字で列名を返すため、大文字で取得する必要がある
-                MessageBox.Show(str);
+                conn.Open();
+                var results = conn.Query("select id, name from accounts");
+                foreach (var r in results)
+                {
+                    var str = $"id:{r.ID}, name:{r.NAME}"; // Oracleは既定ではselect文の記述に関係なく大文字で列名を返すため、大文字で取得する必要がある
+                    MessageBox.Show(str);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show(@"Linuxにログインしoracleにユーザを切り替えて各種起動していることを確認してください
+(このメッセージはフォーカスが当たっているときにCtrl+Cでコピーできます)
+su - oracle
+lsnrctl
+# start
+# quit
+sqlplus system/manager as sysdba
+# SHUTDOWN IMMEDIATE
+# STARTUP");
             }
         }
-
-        
     }
 }
