@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--https://codezine.jp/article/detail/7516 から拝借-->
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; font-family: &quot;MS UI Gothic&quot;; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; font-family: &quot;MS UI Gothic&quot;; ddo-char-set: 128" />
+    <Style Name="Heading2" Value="font-size: 14pt; font-weight: bold; font-style: inherit; font-family: &quot;MS UI Gothic&quot;; ddo-char-set: 128" />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold; ddo-char-set: 128" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader1" Height="1185" BackColor="16777215">
+      <Control Type="AR.Label" Name="Label1" Left="0" Top="793.7007" Width="1440" Height="288" Caption="名前" Style="font-size: 12pt" />
+      <Control Type="AR.Label" Name="Label2" Left="3030.236" Top="793.7009" Width="1440" Height="288" Caption="誕生日" Style="font-size: 12pt" />
+      <Control Type="AR.Label" Name="Label3" Left="5474.835" Top="793.7009" Width="1440" Height="288" Caption="干支" Style="font-size: 12pt" />
+      <Control Type="AR.Label" Name="Label4" Left="7079.813" Top="793.7009" Width="1440" Height="288" Caption="性別" Style="font-size: 12pt" />
+      <Control Type="AR.Label" Name="Label5" Left="2805.166" Top="0" Width="2864.125" Height="453.5434" Caption="名簿" Style="font-size: 18pt; text-align: center" />
+      <Control Type="AR.Line" Name="Line1" X1="0" Y1="1184.882" X2="8519.812" Y2="1184.882" />
+    </Section>
+    <Section Type="Detail" Name="Detail1" Height="495" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtName1" DataField="Name" Left="0" Top="113.3858" Width="2805.166" Height="340.1575" Text="txtName1" Style="font-size: 12pt" />
+      <Control Type="AR.Field" Name="txtDateOfBirth1" DataField="DateOfBirth" Left="3030.237" Top="113.3858" Width="1958.74" Height="340.1575" Text="txtDateOfBirth1" OutputFormat="yyyy年M月d日" Style="font-size: 12pt" />
+      <Control Type="AR.Field" Name="txtGender1" DataField="Gender" Left="7079.813" Top="113.3859" Width="1440" Height="340.1575" Text="txtGender1" Style="font-size: 12pt" />
+      <Control Type="AR.Field" Name="txtDateOfBirth2" DataField="DateOfBirth" Left="5474.835" Top="113.3858" Width="1440" Height="340.1575" Text="txtDateOfBirth2" Style="font-size: 12pt" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter1" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource ConnectF="WRtLJoMB0GE7dXf6FQ5PTdwTLWQ3RmM/5xlnKrk0mFmbMo+MNg8bhnUexH6tUy+PpylMpMNUYK2fooq1JdpvRYGLlu2GpOTkdMdIJXJYLdptL5uVbtXr/GwMgGBZskSQztPb4GVlRMvZ9ZU3MqgvSSuvzYU5JjlcVrLvG2VmOeY=" SQL="SELECT [FirstName] &amp; &quot; &quot; &amp; [LastName] AS Name, DateOfBirth, Gender  &#xD;&#xA;FROM Person Where EducationID = 1" />
+  </DataSources>
+  <Script><![CDATA[public void Detail1_Format()
+{
+	string[] eto = { "子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥" };
+
+	DateTime birthDay;
+	birthDay = (DateTime) this.txtDateOfBirth2.Value;
+	int year = birthDay.Year;
+	this.txtDateOfBirth2.Text = eto[(year - 1900) % eto.Length] + "年";
+
+	string gender;
+	gender = this.txtGender1.Text;
+	if (gender == "M")
+	{
+		this.txtGender1.Text = "男性";
+		this.txtGender1.ForeColor = Color.Blue;
+	}
+	if(gender == "F"){
+		this.txtGender1.Text = "女性";
+		this.txtGender1.ForeColor = Color.Red;
+	}
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>
